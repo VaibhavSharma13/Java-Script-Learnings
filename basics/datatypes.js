@@ -1,7 +1,7 @@
 // types of data types - 2 
 // primitive data types and reference data types
 
-// primitive data types - 7 
+// primitive data types - 7  - store in STACK MEMORY
 // String, Number, Boolean, null, undefined, BigInt, Symbol
 
 let myName = "vaibhav" // string
@@ -18,7 +18,7 @@ let anotherId = Symbol('123')
 // console.log(id == anotherId); // output: false
 
 
-// Reference data types 
+// Reference data types - store in HEAP MEMORY
 // array, object and function
 
 let subjects = ['maths', 'physics', 'chemistry']
