@@ -1,20 +1,41 @@
+// types of data types - 2 
+// primitive data types and reference data types
 
-const userName = "viabhav"
-let age = 24
+// primitive data types - 7 
+// String, Number, Boolean, null, undefined, BigInt, Symbol
 
-console.log(userName, age);
+let myName = "vaibhav" // string
+// console.log(typeof myName); // output: String
 
-// string - ""
-// number - 5
-// null - standalone value which meand we can assgin it as a value to any variable
-// undefined - when variable decalred but no value assgined
-//symbol - unique value
 
-// all above are primitve data types - contain single values
+let temperature = null
+// console.log(typeof temperature); // output: object
 
-// other data types 
-// object - {}
-// array - []
 
-console.log(typeof age);
-console.log(typeof null);  // object
+// even we provie same values to the symbol but it will return unique id's
+let id = Symbol('123')
+let anotherId = Symbol('123')
+// console.log(id == anotherId); // output: false
+
+
+// Reference data types 
+// array, object and function
+
+let subjects = ['maths', 'physics', 'chemistry']
+// console.log(subjects);
+// console.log(typeof subjects); // output: object
+
+// object stores key value pairs
+let info = {
+    name: 'vaibhav',
+    age: 24
+}
+console.log(info);
+console.log(typeof info);
+
+// we can store function in variables
+let myFun = function(){
+    console.log("Hello World");
+}
+console.log(myFun);
+console.log(typeof myFun);
