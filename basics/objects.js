@@ -1,5 +1,5 @@
 // singleton object - constractor method to create singleton objects
-// myObject.create() - it take another object as parameter and inherites properties and methods 
+// const myUser = Object.create(anotherObject) - it take another object as parameter and inherites properties and methods 
 
 // object literals
 
@@ -45,4 +45,10 @@ user.greeting = function(){
 user.greetingTwo = function(){
     console.log(`hello JS user, ${this.name}`);
 }
-console.log(user.greetingTwo());
+// console.log(user.greetingTwo());
+
+user.obj = {
+    height: 10,
+    length: 20
+}
+console.log(typeof user.obj);
