@@ -48,6 +48,6 @@ const user = {
 function printUserInfo(userInfo){
     return `name is ${userInfo.username} and price is ${userInfo.price}`
 }
-console.log(printUserInfo(user));
+// console.log(printUserInfo(user));
 
 
