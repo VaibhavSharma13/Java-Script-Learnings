@@ -64,8 +64,8 @@ newUser.isLoggedIn = false
 
 // console.log(newUser);
 
-console.log(newUser.hasOwnProperty('id'));
-console.log(Object.keys(newUser));  // it return array of keys
+// console.log(newUser.hasOwnProperty('id'));
+// console.log(Object.keys(newUser));  // it return array of keys
 
 
 const regularUser = {
@@ -108,6 +108,42 @@ const users = [
     }
 ]
 // console.log(users[0].email);
+
+
+
+// ****** destructuring of object and JSON intro ****
+
+const course = {
+    courseName: "JS live",
+    price: 999,
+    courseInstructor: "vaibhav"
+}
+
+// course.courseInstructor
+
+
+// destructuring of object
+const {courseInstructor} = course
+const {courseInstructor: instructor} = course  // if we want to use same key with short and diff name
+console.log(courseInstructor);
+console.log(instructor);
+
+
+// in React we use destructuring like this
+// const navbar = ({company}) => {
+
+// }
+// navbar(company = "sharma")
+
+
+// JSON - both key and value in string
+// {
+//     "name": "vaibhav",
+//     "age": 24,
+//     "email": "vaibhav@gmail.com"
+// }
+
+
 
 
 
