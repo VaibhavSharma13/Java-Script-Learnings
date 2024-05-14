@@ -27,4 +27,27 @@ function userLoginMessage(userName = "vaibhav"){
     }
     return `${userName} just logged in`
 }
-console.log(userLoginMessage("bittu"));
+// console.log(userLoginMessage("bittu"));
+
+
+// ******* rest opertaor ******
+
+// this way we can take multiple values and it stores them in array formate
+function addTOCart(...item){
+    return item
+}
+
+// console.log(addTOCart(100, 200, 900, 4000));
+
+
+const user = {
+    username: "vaibhav",
+    price: 199
+}
+
+function printUserInfo(userInfo){
+    return `name is ${userInfo.username} and price is ${userInfo.price}`
+}
+console.log(printUserInfo(user));
+
+
