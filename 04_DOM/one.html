@@ -20,16 +20,25 @@
     </div>
 </body>
 
-// JS script
+ <!-- JS script -->
 
 <script>
 const parent = document.querySelector('.parent')
-console.log(parent);
-console.log(parent.children);
+// console.log(parent);
+// we can access child elements using below method
+// console.log(parent.children); // return html collection
 
+//we can't use forEach loop on html colection
 for (let i = 0; i < parent.children.length; i++) {
-    console.log(parent.children[i].innerHTML);
-    
+    // console.log(parent.children[i].innerHTML);
 }
+
+// we can also access parent elements using child element
+const dayOne = document.querySelector('.day')
+console.log(dayOne);
+console.log(dayOne.parentElement);
+console.log(dayOne.nextElementSibling);
+
+console.log("Nodes :", parent.childNodes);  // output: 9 - 4divs and 5 linebreaks
 </script>
 </html>
