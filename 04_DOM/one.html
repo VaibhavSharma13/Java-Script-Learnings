@@ -12,9 +12,21 @@
     </style>
 </head>
 <body class="bg-black">
-    <div>
-        <h1 id="title" class="heading">Dom learning</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam itaque deserunt maxime rerum, laboriosam ratione quisquam excepturi molestiae modi cum quam, ex laborum vel tenetur eum possimus! Placeat, possimus dolores</p>
+    <div class="parent">
+       <div class="day">Monday</div>
+       <div class="day">Tuesday</div>
+       <div class="day">Wednesday</div>
+       <div class="day">Thursday</div>
     </div>
 </body>
+<script>
+const parent = document.querySelector('.parent')
+console.log(parent);
+console.log(parent.children);
+
+for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    
+}
+</script>
 </html>
