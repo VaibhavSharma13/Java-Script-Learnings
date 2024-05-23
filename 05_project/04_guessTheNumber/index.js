@@ -13,6 +13,8 @@ let playGame = true;
 
 const p = document.createElement('p');
 
+// const p = document.createElement('button');
+
 // let previousGuessesArray = [];
 let numberOfGuesses = 1;
 
