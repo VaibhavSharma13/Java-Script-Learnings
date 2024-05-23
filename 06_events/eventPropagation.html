@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+
+    <style>
+      body {
+        background-color: grey;
+      }
+      img {
+        height: 200px;
+        width: 200px;
+      }
+      a {
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="images">
+      <ul id="images">
+        <!-- avaoid this onclick approach, instead use in js file -->
+        <!-- <li><img src="https://images.pexels.com/photos/24375085/pexels-photo-24375085/free-photo-of-a-dog-is-standing-in-a-field-of-dandelions.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="dog" alt="dog" onclick="alert('clicked on dog image')"></li> -->
+
+        <li>
+          <img
+            src="https://images.pexels.com/photos/24375085/pexels-photo-24375085/free-photo-of-a-dog-is-standing-in-a-field-of-dandelions.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            id="dog"
+            alt="dog"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/23948456/pexels-photo-23948456/free-photo-of-a-sunflower-is-shown-in-this-photo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            id="flower"
+            alt="flower"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/24768408/pexels-photo-24768408/free-photo-of-a-view-of-a-mountain-range-with-a-green-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            id="mountain"
+            alt="mountain"
+          />
+        </li>
+        <li><a href="https://google.com">Google</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // onclick method gices less features, it won't give propogition
+    // document.getElementById('dog').onclick = function() {
+    //     alert('dog clicked');
+    // }
+
+    document.getElementById("dog").addEventListener("click", function (e) {
+      // alert("dog clicked");
+    });
+
+
+    // by default 3rd parameter is false so we can igone it
+    // it is called evetn propagation
+    // by default event propagation follows bubbling
+    document.getElementById("flower").addEventListener("click", function (e) {
+      // alert("flower clicked");
+    }, false);
+
+    // important events
+    // type, timestamp, preventdefault
+    // target, toElement, srcElement, currentTarget
+    // altkey, ctrlKey, shiftKey, keycode
+
+
+     // if event propagation is true
+     // then it follows capurting
+
+     // now this alert will come first - parent element
+     document.getElementById("images").addEventListener("click", function (e) {
+      // alert("images clicked");
+    }, true);
+
+    // child element
+     document.getElementById("mountain").addEventListener("click", function (e) {
+      // alert("mountain clicked");
+    }, true);
+
+
+    // *** image remove ***
+
+    document.querySelector('#images').addEventListener("click", function(e){
+      
+      console.log(e.target);
+      
+      if(e.target.tagName === 'IMG'){
+      let removeImage = e.target.parentNode
+      removeImage.remove()
+      }
+    })
+
+  </script>
+</html>
