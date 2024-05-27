@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Magic</title>
+  </head>
+  <body>
+    <div id="div">
+      <h2 id="table"></h2>
+    </div>
+  </body>
+  <script>
+    window.addEventListener("keydown", function (e) {
+      console.log(e);
+
+      document.getElementById("table").innerHTML = `
+                <table>
+            <tr>
+                <th>Key</th>
+                <th>Key Code</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>${e.key === ' ' ? 'space' : e.key }</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+            </table>
+        `;
+    });
+  </script>
+</html>
