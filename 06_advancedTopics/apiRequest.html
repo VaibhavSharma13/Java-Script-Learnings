@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+    <div id="profile"></div>
+    <button id="show">Show Profile</button>
+  </body>
+  <script>
+    requestUrl = "https://api.github.com/users/hiteshChoudhary";
+
+    const xhr = new XMLHttpRequest(); // XMLHttpRequest is a class so creates an object
+    xhr.open("GET", requestUrl);   // first need to run this method
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+        const data = JSON.parse(this.responseText);
+        // console.log(data.name);
+
+        const profilePic = data.avatar_url;
+        const userName = data.name;
+        const followers = data.followers;
+
+        document.getElementById("show").addEventListener("click", function () {
+          document.getElementById("profile").innerHTML = `
+                    <img src="${profilePic}" style="height:150px; width:150px;"></img>
+                    <h3>${userName}</h3>
+                    <h3>${followers}</h3>
+                `;
+        });
+      }
+    };
+    xhr.send();  // if won't run this send() method then data will not be come
+  </script>
+</html>
