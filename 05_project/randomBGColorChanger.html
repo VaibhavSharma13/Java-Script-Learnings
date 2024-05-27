@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Changer</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        button{
+            margin: 20px;
+            padding: 10px;
+            color: royalblue;    
+        }
+    </style>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+
+    const randomColor = function(){
+
+        const hexColor = '0123456789ABCDEF';
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            color += hexColor[Math.floor(Math.random() * 16)]
+        }
+        console.log(color);
+        return color;
+    }
+
+    const changeColor = function(){
+        document.querySelector('body').style.backgroundColor = randomColor();
+    }
+
+    let intervalId;
+    document.querySelector('#start').addEventListener('click', function(e){
+        if (!intervalId) {
+            intervalId = setInterval(changeColor, 1000)
+        }
+        console.log('Start clicked');
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(e){
+        console.log('Stop clicked');
+        clearInterval(intervalId)
+        intervalId = null;        // good code practices
+    });
+
+</script>
+
+</html>
