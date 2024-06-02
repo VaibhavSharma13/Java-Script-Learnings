@@ -16,11 +16,11 @@ Object literal
 - constructor function
 - prototypes
 - classes
-- Inteances (New, this)
+- Instances (New, this)
 
 
 ## 4 pillars
-Abstraction
-Encapsulation
-Inheritance
-Polymorphism
+- Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
