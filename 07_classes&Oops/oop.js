@@ -48,8 +48,6 @@ const userTwo = new User("vaibhav", 3, true)
 console.log(userOne.constructor);  // constructor property - reference to it's own
 
 
-
-
 // work flow fo new keyword ---
 // when we use new keyword then an empty object is created
 // a constructor function called with the new keyword which pack all the arguments in this empty object
