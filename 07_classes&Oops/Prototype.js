@@ -2,7 +2,7 @@ let myName = "Vaibhav      "
 
 // console.log(myName.length);
 
-// we want to the actual name length
+// we want to print the actual name length
 // we can use trim function 
 // console.log(myName.trim().length);
 
