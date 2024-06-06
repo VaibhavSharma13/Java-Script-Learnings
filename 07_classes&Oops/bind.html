@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind keyword</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+<script>
+    class React{
+        constructor(port, server){
+            this.port = "3000";
+            this.server = "http://localhost";
+
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this));
+        }
+
+
+        handleClick(){
+            console.log(`button clicked`);
+            console.log(this);  // now this is refering to the button
+            console.log(this.server);  // to get the access of the class context we have to bind it with the function's context
+        }
+    }
+
+    const user = new React()
+</script>
+</html>
