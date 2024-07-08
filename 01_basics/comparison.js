@@ -6,7 +6,7 @@
 
 
 // not recommended - try to write a clean and good code
-// console.log("2" > 1);
+console.log("2" > 1);
 // console.log(1 == true);
 
 // both equality and comparison operator works diff

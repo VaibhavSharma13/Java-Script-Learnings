@@ -11,6 +11,9 @@ let myName = "vaibhav" // string
 let temperature = null
 // console.log(typeof temperature); // output: object
 
+let temp = undefined
+console.log(typeof temp); // output: undefined
+
 
 // even we provie same values to the symbol but it will return unique id's
 let id = Symbol('123')

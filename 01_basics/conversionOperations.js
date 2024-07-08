@@ -12,8 +12,8 @@
 
 let anotherString = "33abc"
 let num = Number(anotherString)
-console.log(typeof num);
-console.log(num)
+console.log(typeof num);    // output: number
+console.log(num)    // output: NaN
 
 // "33" - number
 // "33abc" - NaN but type is number 
@@ -24,7 +24,7 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 console.log(typeof booleanIsLoggedIn)
 console.log(booleanIsLoggedIn)
 
-// 1 - true, 0 - false
+// for any positive or negative number it converts to true and for 0 it converts to false
 // "" - false
 // "vaibhav" - true
 
