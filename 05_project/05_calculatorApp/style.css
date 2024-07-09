@@ -21,7 +21,7 @@ body{
     padding: 10px;
     border-radius: 10px;
     background: transparent;
-    box-shadow: 10px 10px 20px rgba(18, 17, 17, 0.5);
+    box-shadow: 5px 5px 20px rgba(141, 140, 140, 0.5);
 }
 
 .input-value{
@@ -32,6 +32,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
+    color: white;
 }
 
 button{
@@ -46,6 +47,10 @@ button{
     box-shadow: -5px -5px 15px rgba(175, 166, 166, 0.1);
     cursor: pointer;
 }
+
+/* button:hover{
+    box-shadow: -5px -5px 15px rgba(175, 166, 166, 0.1);
+} */
 
 .equal-btn{
     background-color: rgb(223, 158, 39);
