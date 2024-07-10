@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #3d9c5e;
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.note-box{
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.add-note-btn{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+    font-size: 160px;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.add-note-btn:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
